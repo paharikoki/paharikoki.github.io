@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #c5c5c5;
+}
+
+body {
+    width: 100%;
+    min-height: max-content;
+    background-color: #24252B;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem 10rem;
+    z-index: 1000;
+}
+
+/* Style the main navigation */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-nav a {
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+    padding: 10px 28px;
+    text-decoration: none;
+    color: #7f7f7f;
+    transition: all 0.4s ease-in-out;
+}
+
+.main-nav a::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+    left: 50%;
+    height: 3px;
+    border-radius: 3px;
+    width: 40%;
+    background-color: #7f7f7f;
+    transition: all 0.4s ease-in-out;
+}
+
+
+
+.main-nav a:hover:before {
+    width: 80%;
+    left: 0;
+    right: 0;
+    background-color: #c5c5c5;
+}
+
+.main-nav a:hover {
+    color: #c5c5c5;
+}
+
+/* Style the logo */
+.header-logo {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    right: 50%;
+    align-items: center;
+}
+
+.logo-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Style the social icons */
+.social-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-nav a {
+    display: inline;
+    margin: 0 10px;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 24px;
+    transition: all 0.4s;
+}
+
+.social-nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    right: 50%;
+    left: 50%;
+    border-radius: 3px;
+    width: 0;
+    background-color: #7f7f7f;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.social-nav a:hover:before {
+    background-color: #c5c5c5;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.section-container {
+    max-width: 100%;
+    padding: 0 10rem;
+}
+
+#section-hero {
+    margin: 5rem 0;
+    height: auto;
+    width: 100%;
+    align-items: start;
+    line-height: 4rem;
+}
+
+.hero-content {
+    width: 65%;
+    gap: 2rem;
+}
+
+.hero-content h2 {
+    font-weight: 600;
+    font-size: 46px;
+}
+
+.hero-content p {
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 20px 40px;
+    background: none;
+    border: none;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border: 2px solid #7f7f7f;
+        transition: transform .2s;
+    }
+
+    &:after,
+    &:before {
+        transform: translate(0, 0);
+    }
+
+    &:hover {
+
+        &:before {
+            transform: translate(-3px, -3px);
+        }
+
+        &:after {
+
+            transform: translate(3px, 3px);
+        }
+    }
+}
+
+#section-project {
+    margin: 5rem 0;
+}
+
+.project-heading,
+#section-contact-us h2 {
+    font-size: 32px;
+    font-weight: 500;
+    position: relative;
+}
+
+.project-heading::before,
+#section-contact-us h2::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    border-radius: 3px;
+    width: 5.5rem;
+    background-color: #7f7f7f;
+    transition: all 0.4s ease-in-out;
+}
+
+.project-container {
+    margin-top: 3rem;
+    width: 100%;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    position: relative;
+    margin-left: 0.5rem;
+    display: flex;
+    gap: 3rem;
+    transition: all 0.6s ease-in-out;
+}
+
+.card-heading {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.card-company-name {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #7f7f7f;
+}
+
+.card-content {
+    padding: 2rem 2rem;
+}
+
+.card-content p {
+    font-size: 22px;
+    margin-bottom: 3.5rem;
+}
+
+.card-container img {
+    height: 450px;
+    background-size: contain;
+}
+
+.card-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -5px;
+    height: 97%;
+    border-radius: 3px;
+    width: 3px;
+    background-color: #7f7f7f;
+    z-index: -10;
+    transition: all 0.6s ease-in-out;
+}
+
+.card-container:hover::before {
+    left: calc(100% + 15px);
+    height: 100%;
+    top: 0;
+    transform: translateY(0%);
+}
+
+#section-project .btn {
+    left: 0;
+    transform: translateX(50%);
+    width: 50%;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+#section-contact-us {
+    margin-bottom: 5rem;
+}
+
+#section-contact-us h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 1.5rem 0;
+}
+
+#section-contact-us form {
+    width: 100%;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+.form-group input,
+#section-contact-us form textarea {
+    font-size: 20px;
+    width: 100%;
+    padding: 15px 20px 15px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #7f7f7f;
+    outline: none;
+    resize: none;
+    transition: all 0.5s ease;
+}
+
+.form-group input::placeholder,
+#section-contact-us form textarea::placeholder {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.form-group input:focus,
+#section-contact-us form textarea:focus {
+    border: none;
+    border-bottom: 3px solid #c5c5c5;
+    color: #c5c5c5;
+}
+
+#section-contact-us .btn {
+    margin: 1rem 0;
+    text-align: center;
+}
